@@ -1,0 +1,57 @@
+<p>form works!</p>
+<pre>few changes pending</pre>
+<form #inptForm="ngForm" (ngSubmit)="enrtData(inptForm.value)">
+    <label>First Name</label>
+    <input type="text" name="fName" required minlength="3" #fName="ngModel" ngModel />
+    <span *ngIf="fName.invalid && fName.touched">Invalid First name</span>
+    <br /><br />
+
+    <label>Last Name </label>
+    <input type="text" name="lName" required #lName="ngModel" ngModel />
+    <span *ngIf="lName.invalid && lName.touched">Invalid last name</span><br /><br />
+
+    <label>DOB </label>
+    <input type="date" ngModel name="DOB" /> <br /><br />
+
+    <label>Favourite Color </label>
+    <input type="color" ngModel name="favColor" /> <br /><br />
+
+    <label>Hobbies </label> <br /><br />
+    <input type="checkbox" ngModel name="hobbi" value="dance" />Dance <br /><br />
+    <input type="checkbox" ngModel name="hobbi" value="sport" /> Sport Activies
+    <br /><br />
+    <input type="checkbox" ngModel name="hobbi" value="read" /> Reading Books <br /><br />
+    <input type="checkbox" ngModel name="hobbi" value="music" />Listen Music <br /><br />
+    <input type="checkbox" ngModel name="hobbi" value="knowledge" />Keep Grabing knowledge
+    <br /><br />
+    <input type="checkbox" ngModel name="hobbi" value="travel" /> travel <br /><br />
+    <button [disabled]="inptForm.invalid">submit</button>
+</form>
+<hr>
+<p>From Here New Form Is Starting</p>
+<hr>
+<form #accountForm="ngForm" (ngSubmit)="addValue(accountForm.value)">
+    <label>Account No.</label>
+    <input type="number" minlength="5" maxlength="5" name="accno" #accno="ngModel" ngModel>
+    <span *ngIf="accno.invalid && accno.touched">Please enter valid Account no.</span>
+    <br><br>
+    <label> Name</label>
+    <input type="text" name="fname" #fname="ngModel" placeholder="FirstName" ngModel>
+    <input type="text" name="lname" #lname="ngModel" placeholder="LastName" ngModel>
+    <br><br>
+    <label>Amount</label>
+    <input type="text" minlength="2" value="$" name="amt" #amt="ngModel" placeholder="Amount" ngModel>
+    <br><br>
+    <button>Add</button>
+
+
+    
+    <ul>
+        <li *ngFor="let info of infom">
+            <tr>{{ info.accno }}</tr>-<tr>{{ info.fname | uppercase}}</tr>-
+            <tr>{{ info.lname | uppercase}}</tr>-<tr>{{ info.amt}}</tr>-
+            --<button class="btn btn-warning" (click)="deleteData(info)">Delete</button>
+            <hr>
+        </li>
+    </ul>
+</form>

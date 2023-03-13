@@ -1,0 +1,87 @@
+<p>httpclient works!</p>
+<!-- <form #studentsdataForm="ngForm"(ngSubmit)="studentinfoForm(studentsdataForm.value)" >
+    <label>student id </label>
+    <input type="text" name="id" ngModel required>
+    <label>Name </label>
+    <input type="text" name="name" ngModel required>
+    <label>Avatar </label>
+    <input type="text" name="avatar" ngModel required><br><br>
+    <button type="submit" [disabled]="studentsdataForm.invalid">submit</button>
+</form> -->
+
+        <!-- <form #myFormData="ngForm" (ngSubmit)="SendFormData(myFormData.value)">
+            <label>Id</label>
+            <input type="text" name="id" required ngModel />
+            <label>Name</label>
+            <input type="text" name="name" required ngModel />
+            <label>Avatar</label>
+            <input type="text" name="avatar" required ngModel />
+            <br><br>
+            <button [disabled]="myFormData.invalid">Add</button>
+        </form> -->
+
+        <!-- <form #myFormData="ngForm" (ngSubmit)="SendFormData(myFormData.value)"> -->
+            
+<p>data-use works!</p>
+<div class="container-fluid">
+    <div class="container">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Avatar</th>
+                <th>Action</th>
+            </tr>
+            <tr class="myStyle">
+                <!-- <th>{{posts.length+1}}</th> -->
+                <th><input type="number" name="id" [(ngModel)]="id" required ngModel /></th>
+                <th><input type="text" name="name" [(ngModel)]="name" required ngModel /></th>
+                <th><input type="text" name="avatar" [(ngModel)]="avatar" required ngModel /></th>                
+                <th>
+                    <button *ngIf="updateData == false" class="btnStyle1" (click)="SendFormData()">Add</button>
+                    <div *ngIf="updateData == true" class="btnStyle2">
+                        <button (click)="modifyData()">Update</button>
+                        <button (click)="cancelData()">Cancel</button>
+                    </div>                    
+                </th>
+            </tr>        
+            <tr *ngFor="let post of posts">
+                <td>{{post.id}}</td>
+                <td>{{post.name}}</td>
+                <td>{{post.avatar}}</td>
+                <td class="buttoncrud "><button class="btn btn-danger" (click)="editData(post)">Edit</button><button class="btn btn-danger" (click)="deleteData(post)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- <table>
+    <tr>
+        <th>student Id</th>
+        <th>Name</th>
+        <th>Avatar</th>
+        <th>Action</th>
+    </tr>
+    <tr class="mystyle">
+        <th>{{students.length +1}}</th>
+        <th><input type="text" name="name" [(ngModel)]="name" required ngModel></th>
+        <th><input type="text" name="avatar" [(ngModel)]="avatar" required ngModel></th>
+        <th>
+            <button *ngIf="updateData==false" (click)="sendFormData()"> Add</button>
+            <button *ngIf="updateData==true" (click)="ModifyData()"> Update</button>
+        </th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td> {{ student.name }}</td>
+        <td> {{student.avatar}}</td>
+        <td><button>Edit</button></td>
+    </tr>
+</table> -->
+<!-- <pre>few changes pending</pre> -->
+
+<!-- <button (click)="getData()"> Get Deta</button> -->
+<!-- <ul>
+<li *ngFor="let student of students"> {{ student.name }}--{{student.id}}
+</li>
+</ul> -->
+<!-- <button (click)="RemoveData(user)"> Remove</button> -->

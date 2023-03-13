@@ -1,0 +1,10 @@
+h2{
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    /* z-index: 1; */
+    bottom:0;
+    background-color: chocolate;
+    text-align: center;
+    text-transform: capitalize;
+}

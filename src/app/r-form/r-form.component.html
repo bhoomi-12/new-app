@@ -1,0 +1,14 @@
+<p>r-form works!</p>
+<form [formGroup]="newForm" (ngSubmit)="submitForm(newForm.value)">
+    <label>First Name </label>
+    <input type="text" id="fName" formControlName="fName"><br><br>
+    <label>Last Name </label>
+    <input type="text" id="lName" formControlName="lName"><br><br>
+    
+    <label>City </label>
+    <input type="text" id="city" formControlName="city"><br><br>
+    
+    <label>State </label>
+    <input type="text" id="state" formControlName="state"><br><br>
+    <button type="submit" [disabled]="newForm.invalid">submit</button>
+    </form>

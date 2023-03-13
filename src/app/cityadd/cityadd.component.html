@@ -1,0 +1,7 @@
+<p>cityadd works!</p>
+<h1>{{firstName | uppercase}}</h1>
+<h2 *ngFor="let city of cities">{{city | uppercase}}</h2>
+<h1 *ngIf="!cities.length">There Are No Cities</h1>
+<!-- <h3> Total Cities:- </h3> -->
+<button (click)="addList()">Add Item</button>
+<button (click)="changeName()"> Click Me</button>

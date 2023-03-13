@@ -1,0 +1,24 @@
+<p>td-form works!</p>
+<form #accountForm="ngForm" (ngSubmit)="addValue(accountForm.value)">
+<!-- <label>Account No.</label>
+<input type="number" minlength="5" maxlength="5" name="accno" #accno="ngModel" ngModel>
+<span *ngIf="accno.invalid && accno.touched">Please enter valid Account no.</span>
+<br><br> -->
+<label>First  Name</label>
+<input type="text" required minlength="3" maxlength="10" name="fname" #fname="ngModel" placeholder="FirstName" ngModel><br><br>
+<label>Last  Name</label>
+<input type="text" name="lname" required="" minlength="3" maxlength="10" #lname="ngModel" placeholder="LastName" ngModel>
+<br><br>
+<label> city</label>
+<input type="text" name="city" #city="ngModel" placeholder="city" ngModel><br><br>
+<label> State</label>
+<input type="text" name="state" #state="ngModel" placeholder="state" ngModel>
+<!-- <label>Amount</label>
+<input type="text" minlength="2" value="$" name="amt" #amt="ngModel" placeholder="Amount" ngModel >
+<br><br> -->
+<button type="submit" [disabled]="accountForm.invalid">Add</button>
+
+<!-- <ul>
+<li *ngFor="let info of infom">{{ info.accno }}-{{ info.fname }}-{{ info.lname }}-{{ info.amt }}---<button (click)="deleteData(info)">Delete</button> </li>
+</ul> -->
+</form>

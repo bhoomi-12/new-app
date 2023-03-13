@@ -1,0 +1,44 @@
+<marquee width="70%" direction="up" height="50%" scrollamount="3">
+  bhoomi ngclass ngswitch works!
+  </marquee>
+<p>Start editing to see some magic happen :)</p>
+<ul class="ul1">
+  <li class="li1" (click)="tabSelected = 'tab1'">Tab 1</li>
+  <li class="li1" (click)="tabSelected = 'tab2'">Tab 2</li>
+  <li class="li1" (click)="tabSelected = 'tab3'">Tab 3</li>
+</ul>
+<!--  -->
+<div [ngSwitch]="tabSelected">
+  <div *ngSwitchCase="'tab1'">
+  <h1>issa tab 1</h1>
+    <ul>
+      <li *ngFor="let name of names">
+        <div [ngClass]="getNames(name)">
+          {{ name }}--<button (click)="remove(name)">remove</button>----
+          <button (click)="addTab(name)">  ADD TO TAB 2 </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--  -->
+  <div *ngSwitchCase="'tab2'">
+  <h1>issa tab 2</h1>
+    <ul>
+      <li *ngFor="let tbtwo of tbbi">
+        {{ tbtwo }}--<button (click)="removebi(tbtwo)">remove</button>--
+        --<button (click)="addbiTab(tbtwo)">ADD TO TAB 3</button>
+      </li>
+    </ul>
+  </div>
+  <!--  -->
+  <div *ngSwitchCase="'tab3'">
+    <h1>issa tab 3</h1>
+  <ul>
+  <li *ngFor="let tbthree of tbtri">
+    {{ tbthree }}--<button (click)="removetri(tbthree)">remove</button>--
+    --<button (click)="addtriTab(tbthree)">ADD TO TAB 2</button>
+  </li>
+</ul>
+  </div>
+  <div *ngSwitchDefault>No page is selcted yet</div>
+</div>

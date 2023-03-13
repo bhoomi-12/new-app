@@ -1,0 +1,23 @@
+p {
+    font-family: Lato;
+  }
+  marquee{
+    color: rgb(22, 78, 59);
+    font-size: large;
+  }
+  .li1{
+    color: aliceblue;
+    list-style-type: none;
+    display: inline-block;
+    margin: 22px;
+    cursor: pointer;
+  }
+  .ul1{
+    background-color: brown;
+  }
+  .mee{
+    color: red;
+  }
+  .batchmates{
+    color: green;
+  }

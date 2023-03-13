@@ -1,0 +1,17 @@
+<p>input-url-img works!</p>
+
+<input [(ngModel)]="imageLink" />
+<button (click)="addImageLink()">Add Image</button>
+<br />
+<br />
+<p>Here Are url to check function</p>
+<pre>https://www.artmajeur.com/medias/standard/k/u/kuptsova/artwork/12709382_dsc-4163.jpg<span>~Happiness</span>
+</pre>
+<pre>https://thumbs.dreamstime.com/b/homemade-burger-fried-potatoes-french-fries-fast-food-set-delicious-fresh-tomatoes-lettuce-onions-cheese-rustic-wooden-table-93980191.jpg<span>~Food</span></pre>
+<pre>https://cdn.pixabay.com/photo/2021/08/22/08/10/hoi-an-6564496__340.jpg<span>~Lights</span></pre>
+  <br />
+<br />
+<div *ngFor="let image of images">
+  <img width="600px" class="image" [src]="image" (click)="delimg(image)" />
+  <!-- <br><br>--<button (click)="delimg(image)"> delete  image</button> -->
+</div>

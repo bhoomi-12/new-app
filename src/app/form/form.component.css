@@ -1,0 +1,16 @@
+tr{
+    padding: 3px;
+    border-radius: 6px;
+    font-weight: bolder;
+    color: whitesmoke;
+    display: inline-block;
+    background-color: #010923;
+}
+p{
+    text-transform: uppercase;
+    color: rgb(9, 53, 53);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    text-shadow: 5px 6px rgb(61, 119, 119);
+}

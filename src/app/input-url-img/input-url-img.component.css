@@ -1,0 +1,11 @@
+span{
+    color: rgb(9, 73, 52);
+    background-color: bisque;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 6px;
+}
+img{
+    margin: 5px;
+}
